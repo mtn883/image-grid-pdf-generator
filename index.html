@@ -140,6 +140,12 @@
         <p id="status"></p>
     </div>
 
+    <div id="feedback-footer" style="text-align: center; margin-top: 50px; padding-bottom: 20px;">
+        <a href="javascript:void(0)" onclick="openFeedbackForm()" style="color: #999; text-decoration: none; font-size: 0.85em; transition: color 0.3s;">
+            フィードバック・要望を送る
+        </a>
+    </div>
+
     <script>
         const { jsPDF } = window.jspdf;
 
@@ -269,6 +275,11 @@
                 img.onerror = reject;
                 img.src = url;
             });
+        }
+
+        function openFeedbackForm() {
+            const feedbackUrl = "https://forms.gle/tcwM6t2qGXyEZpFcA";
+            window.open(feedbackUrl, '_blank');
         }
     </script>
 </body>
